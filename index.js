@@ -12,7 +12,7 @@ let highestCommissionAmount = NaN;
 let lowestCommissionAmount = NaN;
 
 (async () => {
-    const provider = new WsProvider('wss://cc3-3.kusama.network/')
+    const provider = new WsProvider('wss://kusama-rpc.polkadot.io/')
     const api = await ApiPromise.create({ provider })
     const [ currentValidators, totalIssuance, currentEra ] = await Promise.all([
       api.query.session.validators(),
